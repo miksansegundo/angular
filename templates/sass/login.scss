@@ -1,0 +1,342 @@
+$icons-layout: vertical;
+$icons-spacing: 20px; 
+$icons-position:50%;  
+
+@import "compass/utilities/sprites"; 
+@import "icons/*.png"; 
+@include all-icons-sprites;
+
+@import "compass";
+@import "compass/css3";
+@import "compass/reset";
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600italic,600,700,700italic,800,800italic);
+@import url(http://fonts.googleapis.com/css?family=Amatic+SC:400,700);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700,300italic);
+
+$opensans: 'Open Sans', sans-serif;
+$opensc: 'Open Sans Condensed', sans-serif;
+$amatic: 'Amatic SC', cursive;
+
+$blue:#8bc7ea;
+$magenta:#d70456;
+$brown: #5f3c30; 
+$cream:#ecebdc;
+$cream-b:#c3c2b4;
+$cream-g:#d7d6c8;
+$grey-b: #575656;
+$grey: #c3c2ba;
+$yellow:#ffda59;
+
+
+*{
+@include box-sizing (border-box);
+}
+
+.magenta {
+color:$magenta;
+}
+.blue {
+color:$blue;
+}
+
+.brown {
+color:$brown;
+} 
+
+html {
+min-height: 100%;
+height:100%;
+font-size: 100%;
+}
+
+body {
+font-size: 100%;
+background: image-url('background/background.jpg') fixed no-repeat 0 0;
+@include background-size (cover);
+height:100%;
+font-family: $opensans;
+color: $grey-b; 
+
+}
+
+a {
+text-decoration: none;
+}
+li {
+list-style: none;
+}
+
+h1, h2, h3 {
+margin: 0 0 15px;
+}
+h1 {
+font-size: 5.4em;
+font-family: $amatic;
+margin: 0;
+font-weight: bold;
+}
+h2 {
+font-size: 3.0em;    
+}
+h3 {
+font-size: 1.5em;
+font-weight: bold;
+}
+
+p{
+font-size: 0.9em;
+line-height: 28px;
+font-weight: 300;
+}
+
+.left {
+float:left;
+}
+.right {
+float:right;
+}
+.container {
+max-width: 1200px;
+margin: 0 auto;
+width: 100%;
+}
+
+#wrapper {
+min-height:100%;
+position:relative;
+background: image-url('background/lines.png') scroll repeat 0 0;
+}
+
+
+#header {
+width: 100%;
+display: inline-block;
+background-color:$cream;
+    .container {
+    display: table;
+    }
+    .logo {
+    max-width: 250px;
+    display: table-cell;
+    vertical-align: middle;
+    }
+    #tabs {
+    float:right;
+    padding: 2px;
+    
+    }
+}
+
+section {
+width:100%;
+display: table;
+height:100%;
+padding:25px 25px 100px 25px; /* Height of the footer element */
+    aside.banner {
+    max-width: 800px;
+    margin: 0 auto;
+    background: image-url('background/text.png') scroll no-repeat center center;
+    padding:80px 55px;
+    height:420px;
+        .titles {
+        width:40%;
+        float:left;
+        }
+        .text {
+        width:60%;
+        float:left;
+            .link {
+            color:$blue;
+            text-transform: uppercase;
+            display: inline-block;
+            width:100%;
+            text-align: right;
+            font-size: 0.9em;
+            padding: 10px 0;
+            }
+        }
+    }
+}
+.node {
+width:100%;
+display: inline-block;
+    .left, .right {
+    width:50%;
+    float:left;
+    padding:20px;
+    }
+}
+ .tooltip {
+color:#fff;
+width:333px;
+height:239px;
+display: block;
+padding:20px 60px 20px 20px;
+background: image-url('tooltip-magenta.png') scroll no-repeat center center;
+float:left;
+    .partner &{
+    float: right;
+    padding:20px 20px 20px 65px;
+    background: image-url('tooltip-brown.png') scroll no-repeat center center;
+    }
+}
+.circle {
+width:200px;
+height:200px;
+@include border-radius (50%);
+font-size: 2.3em;
+font-family: $amatic;
+color:#fff;
+display: block;
+text-align: center;
+text-transform: uppercase;
+padding:60px 0;
+    .travel & {
+    background-color:$magenta;
+    float:right;
+    }
+    .partner &{
+    background-color:$brown;
+    float:left;
+    }
+}
+
+.nav {
+padding: 0;
+margin: 0;
+width:100%;
+display: inline-block;
+text-align: center;
+    li{
+    display: inline-block;
+    padding:5px 10px;
+        a{
+        color:#fff;
+        text-transform: uppercase;
+        font-size: 0.9em;
+            &:hover {
+            text-decoration: underline;
+            }
+        }
+    }
+}
+
+
+#footer { 
+background-color:$blue;
+width:100%;
+padding:25px 0;
+height:80px;
+position:absolute;
+bottom:0;
+left:0;
+}
+
+
+/* Tabs */  
+
+.tabs input[type=radio] {
+position: absolute;
+top: -9999px;
+left: -9999px;
+}
+.tabs {
+width: 400px;
+height:151px;
+float: right;
+list-style: none;
+position: relative;
+padding: 0;
+}
+.tabs li{
+float: left;
+@include transition (all 0.3s ease-in-out);
+}
+.tabs label {
+background-color:$cream-b;
+font-size: 0.9em;
+padding: 10px 20px; @include transition (all 0.3s ease-in-out);
+color: $brown; 
+float: left; 
+display: block; 
+margin-left: -1px; 
+position: relative; 
+left: 1px;
+width:200px;
+}
+.tabs label:hover {
+background: rgba(255,255,255,0.5);
+top: 0;
+}
+
+.tabs li.active label {
+background-color:$cream-g;
+top: 0;
+}
+
+.tabs li.active div {
+  display: block;
+}
+.tab-content{
+z-index: 2;
+display: none;
+text-align: left;
+width: 100%;
+line-height: 140%;
+background-color:$cream-g;
+position: absolute;
+top: 34px;
+left: 0;
+box-sizing: border-box;
+-webkit-animation-duration: 0.5s;
+-o-animation-duration: 0.5s;
+-moz-animation-duration: 0.5s;
+animation-duration: 0.5s;
+}
+
+/* form*/
+
+form {
+display: inline-block;
+width: 100%;
+padding: 10px;
+    .left{
+    width:65%;
+    padding-right: 10px;
+    }
+    .right {
+    width:35%;
+    }
+    input {
+    width:100%;
+    font-weight: lighter;
+    @include border-radius (5px);
+    border:1px solid $grey;
+    height:30px;
+    overflow: hidden;
+    padding: 0 5px;
+    margin-bottom: 5px;
+    font-size: 0.8em;
+    color:$grey-b;
+        &.submit {
+        float:left;
+        font-size: 1.2em;
+        color:#fff;
+        background-color:$yellow;
+        padding:15px 0;
+        height:65px;
+        cursor: pointer;
+        }
+        &:hover {
+        @include box-shadow (inset 1px 1px 3px #333);
+        }
+    }
+    span {
+    font-size: 0.7em;
+    font-style: italic;
+    float:right;
+    text-align: right;
+    width: 100%;
+    }
+}

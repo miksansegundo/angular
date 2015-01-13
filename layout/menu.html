@@ -1,0 +1,59 @@
+<div class="container"> <!-- menu navigation -->
+
+    <div ng-include="view.inboxMessages"></div>
+
+    <div class="collapse navbar-collapse navbar-ex1-collapse">
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <ul class="nav nav-pills navbar-nav navbar-left">
+            <li ng-repeat="item in globals.user.menu">
+				<a class="page-scroll" ng-href="#{{item.path}}"><span ng-class="item.icon">{{ translations.HEADER_NAV[item.id]}}</a></a>
+			</li>
+        </ul>
+
+    <ul class="nav navbar-top-links navbar-right menu-user">
+       <li class="dropdown">
+            <a data-toggle="dropdown" class="dropdown-toggle notification" href="#/user">
+                <span class="glyphicon glyphicon-user"></span>
+           </a>
+
+           <ul class="dropdown-menu dropdown-messages">
+                <li>
+                    <a href="#">
+                        <div>
+                            <strong>John Smith</strong>
+                            <span class="pull-right text-muted">
+                                <em>Yesterday</em>
+                            </span>
+                        </div>
+                        <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
+                    </a>
+                    <div class="divider"></div>
+                </li>
+                <li>
+                    <a href="#" class="text-center">
+                        <strong>Read All Messages</strong>
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+     <form class="navbar-form navbar-right">
+		<div ui-select ng-change="globals.loadDashboard({reload: true})" ng-model="globals.user.hotel"
+					   ng-if="!window.simpleUI"
+					   theme="select2"
+					   reset-search-input="false"
+					   style="width: 250px;">
+			<span ui-select-match placeholder="{{ translations.SELHOTEL_SELECTONE }}">{{$select.selected.name}}</span>
+			<span ui-select-choices repeat="hotel in globals.user.hotelList | filter: $select.search">
+				<div ng-bind-html="(hotel.nameAndCode || hotel.name) | highlight: $select.search"></div>
+			</span>
+		</div>
+		<select ng-model="globals.user.hotel" ng-options="hotel.name for hotel in globals.user.hotelList" style="width: 100%;" ng-if="window.simpleUI">
+            <option value="">{{ translations.SELHOTEL_SELECTONE }}</option>
+		</select>
+    </form>
+</div>
+</div>
+

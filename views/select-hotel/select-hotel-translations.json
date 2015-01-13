@@ -1,0 +1,9 @@
+{
+    "SELHOTEL":{
+    	"TITLE": "Hotel Selection",
+    	"WELCOME": "Welcome {{name}} {{surname}}",
+		"SELECT": "Select the hotel you want to work with:",
+		"ADD": "Add a new hotel",
+		"OPEN": "Open"
+    }
+}

@@ -1,0 +1,17 @@
+<section class="section login">
+    <div class="block">
+            <form novalidate ng-submit="vm.loadApp(vm.userData)" name="loginForm" ng-controller="LoginController as vm">
+                <h2>{{translations.LOGIN_TITLE}}</h2>
+                <div class="form-group">
+                    <input class="form-control" id="user2" type="text" required placeholder="Partner user name" name="username" ng-model="vm.userData.username" autofocus ng-class="{'has-error': loginForm.username.$invalid && !loginForm.username.$pristine}">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" id="pass2" type="password" required placeholder="Password" name="password" ng-model="vm.userData.password">
+                </div>
+                <div class="form-group">
+                    <input class="submit btn btn-turquesa" type="submit" value="{{translations.LOGIN_BUTTON}}" ng-disabled="loginForm.$invalid">
+                </div>
+                <p><span> {{translations.LOGIN_FORGOT.text}} <a href="" class="magenta">{{translations.LOGIN_FORGOT.link}}</a></span></p>
+            </form>
+        </div>
+</section>

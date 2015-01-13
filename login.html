@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html id="ng-app" ng-app="SWSPortal">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Landing Suplier</title>
+	<link type="text/css" href="views/login/login.css" rel="stylesheet">
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+		<script src="static/libs/ie8.js"></script>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.0.3/es5-shim.js"></script>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.0.3/es5-sham.js"></script>
+	<![endif]-->
+</head>
+<body>
+   <div id="wrapper">
+	<!-- Barra Header -->
+	<div id="header" >
+		<div class="container">
+			<div class="logo">
+				<img src="images/logo.png" title=""  alt=""/>
+			</div>
+			
+			<!-- Acceso Usuarios-->
+			
+			<ul class="tabs" ng-controller="LoginController as vm">
+				<li>
+					<label ng-click="vm.distributorLogin()">Travels Distributors</label>
+				</li>
+				<li class="active" ng-class="active">
+					<label>Travel Partners</label>
+					<div id="tab-content2" class="tab-content animated fadeIn" ng-class="{'active-tab-content': vm.tab2}">
+						
+						<!-- Formulario -->
+						
+						<form novalidate ng-submit="vm.externalAppLogin(vm.userData)" name="loginForm">
+							<div class="left"> 
+								<input id="user2" type="text" required placeholder="Partner user name" name="username" ng-model="vm.userData.username" autofocus ng-class="{'has-error': loginForm.username.$invalid && !loginForm.username.$pristine}">
+								<input id="pass2" type="password" required placeholder="Password" name="password" ng-model="vm.userData.password">
+							</div>
+							<div class="right">
+								<input class="submit" type="submit" value="Sign in" ng-disabled="loginForm.$invalid">
+							</div>
+							<span>Forgot your username or password? <a href="" class="magenta">Click here.</a></span>
+						</form>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	
+	<!-- Contenido -->
+	
+	<section>
+		<div class="container">
+			<aside class="banner">
+				<div class="titles">
+					<h1 class="magenta">PEOPLE.</h1>
+					<h1 class="blue">PASSION.</h1>
+					<h1 class="brown">IDEAS.</h1>
+				</div>
+				<div class="text">
+					<h3>What makes us different?</h3>
+					<h3>Simple. <b class="blue"> It's how we do things.</b></h3>
+					<p>Phasellus maximus quis diam sit amet laoreet. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Mauris a ullamcorper diam.</p>
+					<p>Praesent efficitur ut ligula nec auctor. Ut feugiat viverra tortor, at accumsan orci varius sit amet. In sollicitudin nunc risus, in congue urna ullamcorper sed.</p>
+					<a class="link" href="">View our Corporate Site</a>
+				</div>
+			</aside>
+			<div class="node">
+				<div class="left travel">
+					<a class="circle " href="">Travel <br/>Distributors</a>
+					<p class="tooltip">Phasellus maximus quis diam sit amet laoreet. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+				</div>
+				<div class="right partner ">
+					<a class="circle" href="">Hotel <br/>Partner</a>
+					<p class="tooltip">Phasellus maximus quis diam sit amet laoreet. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+				</div>
+			</div> 
+		</div>
+	   
+	</section>
+	
+	<!-- Footer -->
+	
+	<footer id="footer">
+		 <ul class="nav">
+			<li><a href="">Corporate Info</a></li>
+			<li><a href="">Sustainability</a></li>
+			<li><a href="">Careers</a></li>
+			<li><a href="">Press</a></li>
+			<li><a href="">Contact</a></li>
+		</ul>
+	</footer>
+
+	</div>
+ 
+	<script src="static/libs/angular.js"></script>
+	<script type="text/javascript" src="views/login/login-app.js"></script>
+	<script type="text/javascript" src="views/login/login-factory.js"></script>
+	<script type="text/javascript" src="views/login/login-controller.js"></script>   
+	</body>
+</html>

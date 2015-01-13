@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration PUBLIC "-//LOGGER" "log4j.dtd">
+
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+
+	<appender name="template" class="org.apache.log4j.RollingFileAppender">
+		 <param name="bufferedIO" value="false" />
+		<param name="File" value="${LOG_DIR}/swsportal.log" />
+		 <param name="MaxFileSize" value="50000000" />
+        <param name="MaxBackupIndex" value="5" />
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%-7p %d{(dd/MM/yyyy) HH:mm:ss} [%c{1}]%t%m%n" />
+        </layout>
+	</appender>
+    
+    <appender name="spring" class="org.apache.log4j.RollingFileAppender">
+		<param name="bufferedIO" value="false" />
+		<param name="File" value="${DLOG_DIR}/spring.log" />
+		<param name="MaxFileSize" value="50000000" />
+		<param name="MaxBackupIndex" value="5" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%-7p %d{(dd/MM/yyyy) HH:mm:ss} [%c{1}]%t%m%n" />
+		</layout>
+	</appender>
+	
+	<logger name="com.hotelbeds" additivity="false">
+		<level value="debug" />
+		<appender-ref ref="template" />
+	</logger>
+	
+	<logger name="org.springframework" additivity="false">
+		<level value="${suppliercreation.log.levelOthers:debug}" />
+		<appender-ref ref="spring" />
+	</logger>
+
+</log4j:configuration>

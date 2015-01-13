@@ -1,0 +1,44 @@
+<div data-ng-controller="InboxController as vm" class="sidebar-left navbar-collapse navbar-ex1-collapse">  <!-- notifications -->
+            
+    <button data-toggle="dropdown" class="open-notifications" data-ng-click="toggle.state = !toggle.state" href="#"> <!-- button "open" inside to left -->
+        <span class="badge badge-alert-bg" data-ng-bind="vm.messages.length"> 0 </span> <!--- numbers of notifications -->
+    </button>
+    
+    <div class="inside-left" data-ng-class="{'active' : toggle.state}">  
+       <ul class="notification">
+           
+           <button class="btn right close-norification" data-ng-click="toggle.state = !toggle.state"><span class="glyphicon glyphicon-chevron-left"></span></button>
+           
+            <li class="important">
+                <span class="title"><span class="glyphicon glyphicon-warning-sign"></span>IMPORTANT MESSAGES</span>
+               <a data-ng-repeat="msg in vm.messages">
+                    <em aria-hidden="true" data-dismiss="alert" class="pull-right text-muted delete" type="button"> Delete</em>
+                    <div class="info">
+                        <h4>{{msg.from}}</h4>
+                    </div>
+                    <div class="text">{{msg.text}}</div>
+                    <div class="text-center">
+                        <button type="button" class="btn btn-default">{{translations.BUTTON_1}}</button>
+                    </div>
+                </a>
+            </li>
+           <li>
+                <span class="title"><span class="glyphicon glyphicon-envelope"></span>All Mensajes ({{vm.messages.length}})</span>
+                <em aria-hidden="true" data-dismiss="alert" class="pull-right text-muted delete all" type="button">Delete All</em>
+               <a data-ng-repeat="msg in vm.messages | filter: {type: '!important'}">
+                    <em aria-hidden="true" data-dismiss="alert" class="pull-right text-muted delete" type="button">Delete</em>
+                    <div class="info">
+                        <h4>John Smith</h4>
+                    </div>
+                    <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
+                    <div class="text-center">
+                        <button type="button" class="btn btn-default">Botón normal</button>
+                    </div>
+                </a>
+
+           </li>
+
+        </ul>
+    </div>  
+    
+</div> <!-- End notifications -->

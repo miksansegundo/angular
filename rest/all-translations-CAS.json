@@ -1,0 +1,73 @@
+{
+	"HEADER_TITLE": "HOTEL PARTNERS PORTAL",
+	"HEADER_LOGOUT": "Cerrar sesión",
+	"HEADER_LOGIN": "Acceder",
+	"HEADER_CONTACT_US": "Contacto",
+	"HEADER_NAV":{
+		"quickview": "QUICK PLANNER",
+		"bookings": "BOOKINGS",
+		"rates": "RATES & INVENTORY",
+		"finance": "FINANCE",
+		"content": "HOTEL INFO",
+		"report": "REPORTS"
+	},
+    "LOGIN_TITLE": "ACCEDER",
+	"LOGIN_BUTTON": "Sign in",
+	"LOGIN_FORGOT": {
+		"text": "Forgot your username or password?",
+		"link": "Click here."
+	},
+   	"FOOTER_COPYRIGHT": "\u00A9 Copyright by Hotelbeds.com",
+	"BOOKING_ROOMS": {
+		"TITLE": "Rooms and payment:"
+	 },
+	 "BOOKING_CONDITIONS": {
+		"TITLE": "Conditions:"
+	 },
+	 "BOOKING_TICKETMGT": {
+		"TITLE": "Ticket management:"
+	 },
+	 "CONTACT_TITLE": "Contacto",
+	"SELHOTEL_TITLE": "Hotel Selection",
+	"SELHOTEL_WELCOME": "Welcome {{name}} {{surname}}",
+	"SELHOTEL_SELECT": "Select the hotel you want to work with:",
+	"SELHOTEL_ADD": "Add a new hotel",
+	"SELHOTEL_OPEN": "Open",
+	"SELHOTEL_SELECTONE": "Select a hotel...",
+    "APP_NAME" :  "My Application",
+    "COPYRIGHT" : "\u00A9 Copyright by Hotelbeds.com",
+    "WELCOME": "Bienvenido {{name}} {{surname}}",
+	"DAY": "DAY",
+	"WEEK": "WEEK",
+	"MONTH": "MONTH",
+	"SEASON": "SEASON",
+	"YEAR": "YEAR",
+	"ALLROOMS": "All rooms",
+	"DOUBLE": "Double",
+	"FAMILY": "Family",
+	"CHILDREN": "children",
+	"ADULT": "Adult",
+	"FINDBOOKING": "Find a booking",
+	"REF": "Ref.",
+	"CLIENT": "Client",
+	"CHECKIN": "Check-in",
+	"CHECKOUT": "Check-out",
+	"ADULT": "Adult",
+	"CHILD": "Child",
+	"BABIE": "Babie",
+	"ROOMS": "Rooms",
+	"RATES": "Rates",
+	"STATUS": "Status",
+	"PRINT": "Print",	
+	"OF": "of",	
+	"BOOKINGON": "Boookings on",
+	"SINGLE": "Single",
+	"DOUBLE": "Double",
+	"TRIPLE": "Triple",
+	"SUIT": "Suite",
+	"MEDITERRANEAN": "Mediterranean",
+	"TOTAL": "Total",
+	"MODIFIED": "Modified",
+	"CANCELLED": "Cancelled",
+	"BOOKED": "Booked"
+}

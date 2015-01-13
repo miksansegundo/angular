@@ -1,0 +1,23 @@
+[
+	{
+		"Label": "DAY",
+		"TemplateUrl": "/bookings/bookings.html",
+		"ByDefault": true		
+	},
+	{
+		"Label": "WEEK",
+		"TemplateUrl": "/rates/rates.html"
+	},
+	{
+		"Label": "MONTH",
+		"TemplateUrl": "/rates/rates.html"
+	},
+	{
+		"Label": "SEASON",
+		"TemplateUrl": "/rates/rates.html"
+	},
+	{
+		"Label": "YEAR",
+		"TemplateUrl": "/rates/rates.html"
+	}
+]

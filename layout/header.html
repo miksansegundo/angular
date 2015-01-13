@@ -1,0 +1,10 @@
+<div class="container" ng-controller="LoginController as vm">
+	<ul class="nav navbar-left logo">
+		<li><a><img src="static/images/logo-white.png" alt="Hotelbeds" title=""/> {{ translations.HEADER_TITLE }}</a></li>
+	</ul>
+	<ul class="nav navbar-nav pull-right">
+		<li><a href="#{{view.contact.path}}">{{ translations.HEADER_CONTACT_US }}</a></li>
+		<li><a href="" ng-if="vm.isAuthenticated()" ng-click="vm.logout()">{{ translations.HEADER_LOGOUT }}</a></li>
+		<li><a ng-href="#{{view.login.path}}" ng-if="!vm.isAuthenticated()">{{ translations.HEADER_LOGIN }}</a></li>
+	</ul>
+</div>

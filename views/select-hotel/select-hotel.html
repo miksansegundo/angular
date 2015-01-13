@@ -1,0 +1,37 @@
+<div class="ng-cloak" ng-controller="SelectHotelController as vm">
+
+	<section id="select-hotel" class="select-hotel ">
+
+			<h1 class="border-bottom">Welcome {{ globals.user.name }}</h1>
+			<div class="block">
+				<div class="box">
+					<span class="pull-left text-left">{{ translations.SELHOTEL_SELECT}}</span>
+					<form ng-submit="vm.loadDashboard()" method="get" class="navbar-form navbar-left">
+
+						<div ui-select ng-model="globals.user.hotel"
+									   ng-if="!window.simpleUI"
+									   theme="select2"
+									   reset-search-input="false"
+									   style="width: 100%">
+							<span ui-select-match placeholder="Select a hotel...">{{$select.selected.name}}</span>
+							<span ui-select-choices repeat="hotel in globals.user.hotelList | filter: $select.search">
+								<div ng-bind-html="(hotel.nameAndCode || hotel.name) | highlight: $select.search"></div>
+							</span>
+						</div>
+						<select ng-model="globals.user.hotel" ng-options="hotel.name for hotel in globals.user.hotelList" style="width: 100%;" ng-if="window.simpleUI">
+				            <option value="">{{ translations.SELHOTEL_SELECTONE }}</option>
+						</select>
+
+						<p class="pull-right">
+							<a href="" class="text-orange">{{ translations.SELHOTEL_ADD }}</a>
+						</p>
+						<span class="pull-left text-center">
+						<button type="submit" ng-disabled="!globals.user.hotel" class="btn btn-default btn-turquesa">{{ translations.SELHOTEL_OPEN }}</a>
+						</span>
+					</form>
+				</div>
+			</div>
+
+	</section>
+</div>
+

@@ -1,0 +1,10 @@
+{
+    "topics": [
+        "invalid-credit-card",
+        "no-show"
+    ],
+    "history": [
+        { "date": "2014-09-12 16:32", "user": "Hotelbeds", "descr": "Modification confirmed" },
+        { "date": "2014-09-14 16:31", "user": "Esteban Garcia", "descr": "Client call us to change his reservation, now is from October 2 2014 to October 12, 2014" }
+    ]
+}

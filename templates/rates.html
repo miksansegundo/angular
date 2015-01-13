@@ -1,0 +1,761 @@
+<section id="rates" class="rates-section">
+    
+    <div class="col col-xs-2 col-md-2 padding-right">
+        <div class="block">
+            <div class="box">
+                <div class="menu-rates">
+                    <ul>
+                        <li>Rates & Availability</li>
+                        <ul>
+                            <li><a href="#/rates" class="active">Overall view</a></li>
+                            <li><a href="#/rates-list">Rates list</a></li>
+                            <li><a href="">Edit prices</a></li>
+                            <li><a href="">Create new rate</a></li>
+                            <li><a href="">Edit availability</a></li>
+                            <li><a href="">Open/close availability</a></li>
+                            <li><a href="">Rooms with no avail.</a></li>
+                        </ul>
+                    </ul> 
+                    
+                    <ul>
+                        <li>Offers</li>
+                        <ul>
+                            <li><a href="#/offers">Offers list</a></li>
+                            <li><a href="">Apply/stop offers</a></li>
+                            <li><a href="">Create new offer</a></li>
+                        </ul>
+                    </ul>
+                    <ul>
+                        <li>Supplements</li>
+                        <ul>
+                            <li><a href="#/supplement">Supplements list</a></li>
+                            <li><a href="">Base boards</a></li>
+                            <li><a href="">Request new supplement</a></li>
+                        </ul>
+                    </ul>
+                             
+                    <p>
+                        <button class="btn btn-link general"><span class="icons icon-tools"></span>General configuration</button>
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col col-xs-10 col-md-10 block">
+        <div class="table-responsive table-rates">
+            <table class="table header-table-rates">
+                <thead class="filters">
+                    <th class="first"></th>
+                    <th>
+                        <form>
+                            <div class="input-group calendar-form">
+                                <p>From:</p>
+                                <div class="form-group" ng-class="{'has-error': datepickerForm.date.$invalid}">
+                                    <i class="fa fa-calendar"></i>
+                                    <input class="form-control" ng-model="selectedDate" name="date" bs-datepicker type="text">
+                                </div>
+                            </div>
+                            
+                            <div class="input-group calendar-form">
+                                <p>To:</p>
+                                <div class="form-group" ng-class="{'has-error': datepickerForm.date.$invalid}">
+                                    <i class="fa fa-calendar"></i>
+                                    <input class="form-control" ng-model="selectedDate" name="date" bs-datepicker type="text">
+                                </div>
+                            </div>
+                            
+                            <div class="input-group space-top">
+                                <button class="btn btn-turquesa icon-reload"></button>
+                            </div>
+                             <div class="input-group space-top">
+                                 <div class="group-box">
+                                <input type="checkbox" class="css-checkbox" id="1" checked>
+                                <label class="css-label" name="" for="1">Active (4)</label>
+
+                                <input type="checkbox" class="css-checkbox" id="2" checked>
+                                <label class="css-label" name="" for="2">Inactive (1)</label>
+                                </div>     
+                            </div>
+                            <div class="input-group">
+                                <p>Show:</p>
+                                <div class="styled-select">
+                                    <select class="form-control">
+                                      <option>All rooms</option>
+                                      <option>Double</option>
+                                      <option>Single</option>
+                                      <option>Triple</option>
+                                      <option>...</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="input-group space-top pull-right">
+                                <button class="btn btn-turquesa ">Save Changes</button>
+                            </div>
+                        </form>
+                    </th>
+                </thead> <!-- end thead -->
+                
+                <tbody>
+                    <tr class="days-selected">
+                        <th class="first"></th>
+                        <td class="today">Tue</br>18</td>
+                        <td>Wed</br>19</td>
+                        <td>Thu</br>20</td>
+                        <td>Fri</br>21</td>
+                        <td class="w-end">Sat</br>22</td>
+                        <td class="w-end">Sun</br>23</td>
+                        <td>Mon</br>24</td>
+                        <td>Tue</br>25</td>
+                        <td>Wed</br>26</td>
+                        <td>Thu</br>27</td>
+                        <td>Fri</br>28</td>
+                        <td class="w-end">Sat</br>29</td>
+                        <td class="w-end">Sun</br>30</td>
+                        <td>Mon</br>1</td>
+                        <td>Tue</br>2</td>
+                    </tr>
+                    
+                </tbody> <!-- end tbody -->
+                
+            </table> <!-- end table -->
+
+            <table class="table sub-table">
+                <h3 class="bold bed-name">Double<span class="icons icon-linked"></span></h3> 
+                <thead class="total-rates">
+                    <tr>
+                    <th class="first">Total Availability</th>
+                    <th>11</th>
+                    <th>28</th>
+                    <th>38</th>
+                    <th>16</th>
+                    <th class="text-closed">CLOSED</th>
+                    <th class="text-closed">CLOSED</th>
+                    <th>31</th>
+                    <th>46</th>
+                    <th>72</th>
+                    <th>28</th>
+                    <th>21</th>
+                    <th>15</th>
+                    <th>31</th>
+                    <th>46</th>
+                    <th>72</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th class="linked">BAR<span class="icons icon-linked"></span></th>
+                        <td><div class="box">5</div></td>
+                        <td><div class="box">12</div></td>
+                        <td><div class="box">23</div></td>
+                        <td><div class="box">5</div></td>
+                        <td class="closed"><div class="box">X</div></td>
+                        <td class="closed"><div class="box">X</div></td>
+                        <td><div class="box">5</div></td>
+                        <td><div class="box">12</div></td>
+                        <td><div class="box">25</div></td>
+                        <td><div class="box">5</div></td>
+                        <td><div class="box">5</div></td>
+                        <td class="warning hover hover-top">
+                            <div class="box">0
+                                <ul>
+                                    <li>Price: 100€</li>
+                                    <li class="text-closed">sold out</li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td><div class="box">12</div></td>
+                        <td><div class="box">23</div></td>
+                        <td><div class="box">5</div></td>
+                    </tr>
+                    <tr>
+                        <th class="linked">LATAM and Europe m.<span class="icons icon-linked"></span></th>
+                        <td><div class="box">5</div></td>
+                        <td><div class="box">12</div></td>
+                        <td><div class="box">10</div></td>
+                        <td><div class="box">5</div></td>
+                        <td class="closed"><div class="box">X</div></td>
+                        <td class="closed"><div class="box">X</div></td>
+                        <td><div class="box">3</div></td>
+                        <td><div class="box">8</div></td>
+                        <td><div class="box">10</div></td>
+                        <td><div class="box">5</div></td>
+                        <td><div class="box">1</div></td>
+                        <td><div class="box">6</div></td>
+                        <td><div class="box">10</div></td>
+                        <td>
+                            <div class="box">5
+                                <span class="icon-message hover hover-left">
+                                    <ul>
+                                        <li class="red">Price missing</li>
+                                    </ul>
+                                </span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="box">5
+                                <span class="icon-message hover hover-left">
+                                    <ul>
+                                        <li class="red">Price missing</li>
+                                    </ul>
+                                </span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Fly direct</th>
+                        <td><div class="box">5</div></td>
+                        <td><div class="box">12</div></td>
+                        <td><div class="box">10</div></td>
+                        <td><div class="box">5</div></td>
+                        <td class="closed"><div class="box">X</div></td>
+                        <td class="closed"><div class="box">X</div></td>
+                        <td><div class="box">3</div></td>
+                        <td><div class="box">8</div></td>
+                        <td><div class="box">10</div></td>
+                        <td><div class="box">5</div></td>
+                        <td><div class="box">1</div></td>
+                        <td><div class="box">6</div></td>
+                        <td><div class="box">10</div></td>
+                        <td><div class="box">5</div></td>
+                        <td><div class="box">5</div></td>
+                    </tr>
+                    <tr>
+                        <th>NRF 15% Winter BB</th>
+                        <td><div class="box">5</div></td>
+                        <td><div class="box">12</div></td>
+                        <td><div class="box">10</div></td>
+                        <td><div class="box">5</div></td>
+                        <td class="closed"><div class="box">X</div></td>
+                        <td class="closed"><div class="box">X</div></td>
+                        <td><div class="box">3</div></td>
+                        <td><div class="box">8</div></td>
+                        <td><div class="box">10</div></td>
+                        <td><div class="box">5</div></td>
+                        <td><div class="box">1</div></td>
+                        <td><div class="box">6</div></td>
+                        <td><div class="box">10</div></td>
+                        <td><div class="box">5</div></td>
+                        <td><div class="box">5</div></td>
+                    </tr>
+                    <tr>
+                        <th>All market DUS</th>
+                        <td class="closed"><div class="box">X</div></td>
+                        <td class="closed"><div class="box">X</div></td>
+                        <td class="closed"><div class="box">X</div></td>
+                        <td class="closed"><div class="box">X</div></td>
+                        <td class="closed"><div class="box">X</div></td>
+                        <td class="closed"><div class="box">X</div></td>
+                        <td class="closed"><div class="box">X</div></td>
+                        <td class="closed"><div class="box">X</div></td>
+                        <td class="closed"><div class="box">X</div></td>
+                        <td class="closed"><div class="box">X</div></td>
+                        <td class="closed"><div class="box">X</div></td>
+                        <td class="closed"><div class="box">X</div></td>
+                        <td class="closed"><div class="box">X</div></td>
+                        <td class="closed"><div class="box">X</div></td>
+                        <td class="closed"><div class="box">X</div></td>
+                        
+                    </tr>
+                </tbody>
+            </table> <!-- end sub table -->
+            
+            <table class="table sub-table">
+                <h3 class="bold bed-name">Single<span class="icons icon-linked"></span></h3> 
+                <thead class="total-rates">
+                    <tr>
+                    <th class="first">Total Availability</th>
+                    <th>11</th>
+                    <th>28</th>
+                    <th>38</th>
+                    <th>16</th>
+                    <th>23</th>
+                    <th>25</th>
+                    <th>31</th>
+                    <th>46</th>
+                    <th>72</th>
+                    <th>28</th>
+                    <th>21</th>
+                    <th>15</th>
+                    <th>31</th>
+                    <th>46</th>
+                    <th>72</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th class="linked">BAR<span class="icons icon-linked"></span></th>
+                        <td><div class="box">5</div></td>
+                        <td><div class="box">12</div></td>
+                        <td><div class="box">23</div></td>
+                        <td><div class="box">5</div></td>
+                        <td><div class="box">5</div></td>
+                        <td><div class="box">6</div></td>
+                        <td><div class="box">5</div></td>
+                        <td><div class="box">12</div></td>
+                        <td><div class="box">25</div></td>
+                        <td><div class="box">5</div></td>
+                        <td><div class="box">5</div></td>
+                        <td class="warning hover hover-top">
+                            <div class="box">0
+                                <ul>
+                                    <li>Price: 100€</li>
+                                    <li class="text-closed">sold out</li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td><div class="box">12</div></td>
+                        <td><div class="box">23</div></td>
+                        <td><div class="box">5</div></td>
+                    </tr>
+                    <tr>
+                        <th class="linked">LATAM and Europe m.<span class="icons icon-linked"></span></th>
+                        <td><div class="box">5</div></td>
+                        <td><div class="box">12</div></td>
+                        <td><div class="box">10</div></td>
+                        <td><div class="box">5</div></td>
+                        <td><div class="box">4</div></td>
+                        <td><div class="box">2</div></td>
+                        <td><div class="box">3</div></td>
+                        <td><div class="box">8</div></td>
+                        <td><div class="box">10</div></td>
+                        <td><div class="box">5</div></td>
+                        <td><div class="box">1</div></td>
+                        <td><div class="box">6</div></td>
+                        <td><div class="box">10</div></td>
+                        <td><div class="box">5</div></td>
+                        <td><div class="box">5</div></td>
+                    </tr>
+                    <tr>
+                        <th>Fly direct</th>
+                        <td><div class="box">5</div></td>
+                        <td><div class="box">12</div></td>
+                        <td><div class="box">10</div></td>
+                        <td><div class="box">5</div></td>
+                        <td><div class="box">7</div></td>
+                        <td><div class="box">5</div></td>
+                        <td><div class="box">3</div></td>
+                        <td><div class="box">8</div></td>
+                        <td><div class="box">10</div></td>
+                        <td><div class="box">5</div></td>
+                        <td><div class="box">1</div></td>
+                        <td><div class="box">6</div></td>
+                        <td><div class="box">10</div></td>
+                        <td><div class="box">5</div></td>
+                        <td><div class="box">5</div></td>
+                    </tr>
+                    <tr>
+                        <th>NRF 15% Winter BB</th>
+                        <td><div class="box">5</div></td>
+                        <td><div class="box">12</div></td>
+                        <td><div class="box">10</div></td>
+                        <td><div class="box">5</div></td>
+                        <td><div class="box">6</div></td>
+                        <td><div class="box">7</div></td>
+                        <td><div class="box">3</div></td>
+                        <td><div class="box">8</div></td>
+                        <td><div class="box">10</div></td>
+                        <td><div class="box">5</div></td>
+                        <td><div class="box">1</div></td>
+                        <td><div class="box">6</div></td>
+                        <td><div class="box">10</div></td>
+                        <td><div class="box">5</div></td>
+                        <td><div class="box">5</div></td>
+                    </tr>
+                    <tr>
+                        <th>All market DUS</th>
+                        <td class="closed"><div class="box">X</div></td>
+                        <td class="closed"><div class="box">X</div></td>
+                        <td class="closed"><div class="box">X</div></td>
+                        <td class="closed"><div class="box">X</div></td>
+                        <td class="closed"><div class="box">X</div></td>
+                        <td class="closed"><div class="box">X</div></td>
+                        <td class="closed"><div class="box">X</div></td>
+                        <td class="closed"><div class="box">X</div></td>
+                        <td class="closed"><div class="box">X</div></td>
+                        <td class="closed"><div class="box">X</div></td>
+                        <td class="closed"><div class="box">X</div></td>
+                        <td class="closed"><div class="box">X</div></td>
+                        <td class="closed"><div class="box">X</div></td>
+                        <td class="closed"><div class="box">X</div></td>
+                        <td class="closed"><div class="box">X</div></td>
+                    </tr>
+                </tbody>
+            </table> <!-- end sub table -->
+            
+            <table class="table sub-table">
+                <h3 class="bold bed-name">Triple<span class="icons icon-linked"></span></h3> 
+                <thead class="total-rates">
+                    <tr>
+                    <th class="first">Total Availability</th>
+                    <th>11</th>
+                    <th>28</th>
+                    <th>38</th>
+                    <th>16</th>
+                    <th>23</th>
+                    <th>25</th>
+                    <th>31</th>
+                    <th>46</th>
+                    <th>72</th>
+                    <th>28</th>
+                    <th>21</th>
+                    <th>15</th>
+                    <th>31</th>
+                    <th>46</th>
+                    <th>72</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th class="linked">BAR<span class="icons icon-linked"></span></th>
+                        <td><div class="box">5</div></td>
+                        <td><div class="box">12</div></td>
+                        <td><div class="box">23</div></td>
+                        <td><div class="box">5</div></td>
+                        <td><div class="box">5</div></td>
+                        <td><div class="box">6</div></td>
+                        <td><div class="box">5</div></td>
+                        <td><div class="box">12</div></td>
+                        <td><div class="box">25</div></td>
+                        <td><div class="box">5</div></td>
+                        <td><div class="box">5</div></td>
+                        <td class="warning hover hover-top">
+                            <div class="box">0
+                                <ul>
+                                    <li>Price: 100€</li>
+                                    <li class="text-closed">sold out</li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td><div class="box">12</div></td>
+                        <td><div class="box">23</div></td>
+                        <td><div class="box">5</div></td>
+                    </tr>
+                    <tr>
+                        <th class="linked">LATAM and Europe m.<span class="icons icon-linked"></span></th>
+                        <td><div class="box">5</div></td>
+                        <td><div class="box">12</div></td>
+                        <td><div class="box">10</div></td>
+                        <td><div class="box">5</div></td>
+                        <td><div class="box">4</div></td>
+                        <td><div class="box">2</div></td>
+                        <td><div class="box">3</div></td>
+                        <td><div class="box">8</div></td>
+                        <td><div class="box">10</div></td>
+                        <td><div class="box">5</div></td>
+                        <td><div class="box">1</div></td>
+                        <td><div class="box">6</div></td>
+                        <td><div class="box">10</div></td>
+                        <td><div class="box">5</div></td>
+                        <td><div class="box">5</div></td>
+                    </tr>
+                    <tr>
+                        <th>Fly direct</th>
+                        <td><div class="box">5</div></td>
+                        <td><div class="box">12</div></td>
+                        <td><div class="box">10</div></td>
+                        <td><div class="box">5</div></td>
+                        <td><div class="box">7</div></td>
+                        <td><div class="box">5</div></td>
+                        <td><div class="box">3</div></td>
+                        <td><div class="box">8</div></td>
+                        <td><div class="box">10</div></td>
+                        <td><div class="box">5</div></td>
+                        <td><div class="box">1</div></td>
+                        <td><div class="box">6</div></td>
+                        <td><div class="box">10</div></td>
+                        <td><div class="box">5</div></td>
+                        <td><div class="box">5</div></td>
+                    </tr>
+                    <tr>
+                        <th>NRF 15% Winter BB</th>
+                        <td><div class="box">5</div></td>
+                        <td><div class="box">12</div></td>
+                        <td><div class="box">10</div></td>
+                        <td><div class="box">5</div></td>
+                        <td><div class="box">6</div></td>
+                        <td><div class="box">7</div></td>
+                        <td><div class="box">3</div></td>
+                        <td><div class="box">8</div></td>
+                        <td><div class="box">10</div></td>
+                        <td><div class="box">5</div></td>
+                        <td><div class="box">1</div></td>
+                        <td><div class="box">6</div></td>
+                        <td><div class="box">10</div></td>
+                        <td><div class="box">5</div></td>
+                        <td><div class="box">5</div></td>
+                    </tr>
+                    <tr>
+                        <th>All market DUS</th>
+                        <td class="closed"><div class="box">X</div></td>
+                        <td class="closed"><div class="box">X</div></td>
+                        <td class="closed"><div class="box">X</div></td>
+                        <td class="closed"><div class="box">X</div></td>
+                        <td class="closed"><div class="box">X</div></td>
+                        <td class="closed"><div class="box">X</div></td>
+                        <td class="closed"><div class="box">X</div></td>
+                        <td class="closed"><div class="box">X</div></td>
+                        <td class="closed"><div class="box">X</div></td>
+                        <td class="closed"><div class="box">X</div></td>
+                        <td class="closed"><div class="box">X</div></td>
+                        <td class="closed"><div class="box">X</div></td>
+                        <td class="closed"><div class="box">X</div></td>
+                        <td class="closed"><div class="box">X</div></td>
+                        <td class="closed"><div class="box">X</div></td>
+                    </tr>
+                </tbody>
+            </table> <!-- end sub table -->
+
+            <table class="table sub-table">
+                <h3 class="bold bed-name">Suite<span class="icons icon-linked"></span></h3> 
+                <thead class="total-rates">
+                    <tr>
+                    <th class="first">Total Availability</th>
+                    <th>11</th>
+                    <th>28</th>
+                    <th>38</th>
+                    <th>16</th>
+                    <th>23</th>
+                    <th>25</th>
+                    <th>31</th>
+                    <th>46</th>
+                    <th>72</th>
+                    <th>28</th>
+                    <th>21</th>
+                    <th>15</th>
+                    <th>31</th>
+                    <th>46</th>
+                    <th>72</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th class="linked">BAR<span class="icons icon-linked"></span></th>
+                        <td><div class="box">5</div></td>
+                        <td><div class="box">12</div></td>
+                        <td><div class="box">23</div></td>
+                        <td><div class="box">5</div></td>
+                        <td><div class="box">5</div></td>
+                        <td><div class="box">6</div></td>
+                        <td><div class="box">5</div></td>
+                        <td><div class="box">12</div></td>
+                        <td><div class="box">25</div></td>
+                        <td><div class="box">5</div></td>
+                        <td><div class="box">5</div></td>
+                        <td class="warning hover hover-top">
+                            <div class="box">0
+                                <ul>
+                                    <li>Price: 100€</li>
+                                    <li class="text-closed">sold out</li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td><div class="box">12</div></td>
+                        <td><div class="box">23</div></td>
+                        <td><div class="box">5</div></td>
+                    </tr>
+                    <tr>
+                        <th class="linked">LATAM and Europe m.<span class="icons icon-linked"></span></th>
+                        <td><div class="box">5</div></td>
+                        <td><div class="box">12</div></td>
+                        <td><div class="box">10</div></td>
+                        <td><div class="box">5</div></td>
+                        <td><div class="box">4</div></td>
+                        <td><div class="box">2</div></td>
+                        <td><div class="box">3</div></td>
+                        <td><div class="box">8</div></td>
+                        <td><div class="box">10</div></td>
+                        <td><div class="box">5</div></td>
+                        <td><div class="box">1</div></td>
+                        <td><div class="box">6</div></td>
+                        <td><div class="box">10</div></td>
+                        <td><div class="box">5</div></td>
+                        <td><div class="box">5</div></td>
+                    </tr>
+                    <tr>
+                        <th>Fly direct</th>
+                        <td><div class="box">5</div></td>
+                        <td><div class="box">12</div></td>
+                        <td><div class="box">10</div></td>
+                        <td><div class="box">5</div></td>
+                        <td><div class="box">7</div></td>
+                        <td><div class="box">5</div></td>
+                        <td><div class="box">3</div></td>
+                        <td><div class="box">8</div></td>
+                        <td><div class="box">10</div></td>
+                        <td><div class="box">5</div></td>
+                        <td><div class="box">1</div></td>
+                        <td><div class="box">6</div></td>
+                        <td><div class="box">10</div></td>
+                        <td><div class="box">5</div></td>
+                        <td><div class="box">5</div></td>
+                    </tr>
+                    <tr>
+                        <th>NRF 15% Winter BB</th>
+                        <td><div class="box">5</div></td>
+                        <td><div class="box">12</div></td>
+                        <td><div class="box">10</div></td>
+                        <td><div class="box">5</div></td>
+                        <td><div class="box">6</div></td>
+                        <td><div class="box">7</div></td>
+                        <td><div class="box">3</div></td>
+                        <td><div class="box">8</div></td>
+                        <td><div class="box">10</div></td>
+                        <td><div class="box">5</div></td>
+                        <td><div class="box">1</div></td>
+                        <td><div class="box">6</div></td>
+                        <td><div class="box">10</div></td>
+                        <td><div class="box">5</div></td>
+                        <td><div class="box">5</div></td>
+                    </tr>
+                    <tr>
+                        <th>All market DUS</th>
+                        <td class="closed"><div class="box">X</div></td>
+                        <td class="closed"><div class="box">X</div></td>
+                        <td class="closed"><div class="box">X</div></td>
+                        <td class="closed"><div class="box">X</div></td>
+                        <td class="closed"><div class="box">X</div></td>
+                        <td class="closed"><div class="box">X</div></td>
+                        <td class="closed"><div class="box">X</div></td>
+                        <td class="closed"><div class="box">X</div></td>
+                        <td class="closed"><div class="box">X</div></td>
+                        <td class="closed"><div class="box">X</div></td>
+                        <td class="closed"><div class="box">X</div></td>
+                        <td class="closed"><div class="box">X</div></td>
+                        <td class="closed"><div class="box">X</div></td>
+                        <td class="closed"><div class="box">X</div></td>
+                        <td class="closed"><div class="box">X</div></td>
+                    </tr>
+                </tbody>
+            </table> <!-- end sub table -->
+
+            <table class="table sub-table">
+                <h3 class="bold bed-name">Mediterranean view<span class="icons icon-linked"></span></h3> 
+                <thead class="total-rates">
+                    <tr>
+                    <th class="first">Total Availability</th>
+                    <th>11</th>
+                    <th>28</th>
+                    <th>38</th>
+                    <th>16</th>
+                    <th>23</th>
+                    <th>25</th>
+                    <th>31</th>
+                    <th>46</th>
+                    <th>72</th>
+                    <th>28</th>
+                    <th>21</th>
+                    <th>15</th>
+                    <th>31</th>
+                    <th>46</th>
+                    <th>72</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th class="linked">BAR<span class="icons icon-linked"></span></th>
+                        <td><div class="box">5</div></td>
+                        <td><div class="box">12</div></td>
+                        <td><div class="box">23</div></td>
+                        <td><div class="box">5</div></td>
+                        <td><div class="box">5</div></td>
+                        <td><div class="box">6</div></td>
+                        <td><div class="box">5</div></td>
+                        <td><div class="box">12</div></td>
+                        <td><div class="box">25</div></td>
+                        <td><div class="box">5</div></td>
+                        <td><div class="box">5</div></td>
+                        <td class="warning hover hover-top">
+                            <div class="box">0
+                                <ul>
+                                    <li>Price: 100€</li>
+                                    <li class="text-closed">sold out</li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td><div class="box">12</div></td>
+                        <td><div class="box">23</div></td>
+                        <td><div class="box">5</div></td>
+                    </tr>
+                    <tr>
+                        <th class="linked">LATAM and Europe m.<span class="icons icon-linked"></span></th>
+                        <td><div class="box">5</div></td>
+                        <td><div class="box">12</div></td>
+                        <td><div class="box">10</div></td>
+                        <td><div class="box">5</div></td>
+                        <td><div class="box">4</div></td>
+                        <td><div class="box">2</div></td>
+                        <td><div class="box">3</div></td>
+                        <td><div class="box">8</div></td>
+                        <td><div class="box">10</div></td>
+                        <td><div class="box">5</div></td>
+                        <td><div class="box">1</div></td>
+                        <td><div class="box">6</div></td>
+                        <td><div class="box">10</div></td>
+                        <td><div class="box">5</div></td>
+                        <td><div class="box">5</div></td>
+                    </tr>
+                    <tr>
+                        <th>Fly direct</th>
+                        <td><div class="box">5</div></td>
+                        <td><div class="box">12</div></td>
+                        <td><div class="box">10</div></td>
+                        <td><div class="box">5</div></td>
+                        <td><div class="box">7</div></td>
+                        <td><div class="box">5</div></td>
+                        <td><div class="box">3</div></td>
+                        <td><div class="box">8</div></td>
+                        <td><div class="box">10</div></td>
+                        <td><div class="box">5</div></td>
+                        <td><div class="box">1</div></td>
+                        <td><div class="box">6</div></td>
+                        <td><div class="box">10</div></td>
+                        <td><div class="box">5</div></td>
+                        <td><div class="box">5</div></td>
+                    </tr>
+                    <tr>
+                        <th>NRF 15% Winter BB</th>
+                        <td><div class="box">5</div></td>
+                        <td><div class="box">12</div></td>
+                        <td><div class="box">10</div></td>
+                        <td><div class="box">5</div></td>
+                        <td><div class="box">6</div></td>
+                        <td><div class="box">7</div></td>
+                        <td><div class="box">3</div></td>
+                        <td><div class="box">8</div></td>
+                        <td><div class="box">10</div></td>
+                        <td><div class="box">5</div></td>
+                        <td><div class="box">1</div></td>
+                        <td><div class="box">6</div></td>
+                        <td><div class="box">10</div></td>
+                        <td><div class="box">5</div></td>
+                        <td><div class="box">5</div></td>
+                    </tr>
+                    <tr>
+                        <th>All market DUS</th>
+                        <td class="closed"><div class="box">X</div></td>
+                        <td class="closed"><div class="box">X</div></td>
+                        <td class="closed"><div class="box">X</div></td>
+                        <td class="closed"><div class="box">X</div></td>
+                        <td class="closed"><div class="box">X</div></td>
+                        <td class="closed"><div class="box">X</div></td>
+                        <td class="closed"><div class="box">X</div></td>
+                        <td class="closed"><div class="box">X</div></td>
+                        <td class="closed"><div class="box">X</div></td>
+                        <td class="closed"><div class="box">X</div></td>
+                        <td class="closed"><div class="box">X</div></td>
+                        <td class="closed"><div class="box">X</div></td>
+                        <td class="closed"><div class="box">X</div></td>
+                        <td class="closed"><div class="box">X</div></td>
+                        <td class="closed"><div class="box">X</div></td>
+                    </tr>
+                </tbody>
+            </table> <!-- end sub table -->
+
+        </div>
+    </div>
+
+</section> <!-- end section -->
+
+

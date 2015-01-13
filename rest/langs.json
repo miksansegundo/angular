@@ -1,0 +1,6 @@
+[
+    { "id": "en", "name": "English" },
+    { "id": "es", "name": "Spanish" },
+    { "id": "pt", "name": "Portuguese" },
+    { "id": "it", "name": "Italian" }
+]

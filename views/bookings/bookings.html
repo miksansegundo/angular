@@ -1,0 +1,130 @@
+<section id="day-view" class="day-section ">
+    	
+	<div ng-controller="BookingsController as vm">
+    <!-- Modulo de selección de tipos de habitación -->    
+
+        <div class="pagination-calendar pagination-day">
+            <div class="col-xs-6 col-md-4"> 
+                <form role="select" class="navbar-form navbar-left">
+                    <select class="form-control" ng-model="roomTypeSelected">
+                      <option value>{{translations.ALLROOMS}}</option>
+                      <option value="DBL">{{translations.DOUBLE}}</option>
+                      <option value="SGL">{{translations.SINGLE}}</option>
+                      <option value="CHL">{{translations.CHILDREN}}</option>
+                      <option value="ADL">{{translations.ADULT}}</option>
+                    </select>
+                </form>
+            </div>
+            
+            <div class="col-xs-6 col-md-4">
+                <ul class="pager">
+                  <li><a><span class="glyphicon glyphicon-calendar-left" ng-click="vm.getBookingsNextDay('-1')"></span></a></li>
+                  <span class="title-pager" ng-bind="vm.date | date:'yyyy-MM-dd'"></span>
+                  <li><a><span class="glyphicon glyphicon-calendar-right" ng-click="vm.getBookingsNextDay('1')"></span></a></li>
+                </ul>
+            </div>
+            <div class="col-xs-6 col-md-4">
+                 <ul class="nav nav-pills navbar-nav navbar-right">
+                    <li><a href="#"><span class="glyphicon glyphicon-search"></span>{{translations.FINDBOOKING}}</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-print"></span>{{translations.PRINT}}</a></li>
+                </ul>
+            </div>
+        </div>
+   
+    <!-- Listado de reservas -->
+
+        <div id="stickyline" class="row block">
+            	<table id="sorted" class="table tablesorter table-hover table-day">
+	                <thead>
+	                    <tr>
+	                        <th>{{translations.REF}}</th>
+	                        <th>{{translations.CLIENT}}</th>
+	                        <th>{{translations.CHECKIN}}</th>
+	                        <th>{{translations.CHECKOUT}}</th>
+	                        <th>{{translations.ROOMS}}</th>
+	                        <th>{{translations.ADULT}} / {{translations.CHILD}} / {{translations.BABIE}}</th>
+	                        
+	                        <th>{{translations.RATES}}</th>
+	                        <th>{{translations.STATUS}}</th>
+	                        <th>New</th>
+	                        <th>
+	                            <span class="glyphicon glyphicon-comment"></span>
+	                        </th>
+	                    </tr>
+	                </thead>
+	                <tbody>
+                		 <tr ng-if="!vm.bookings.length"><td><img ng-src="http://www.robojob.eu/util/lightbox/images/loading.gif"></td></tr>
+	                     <tr ng-repeat="book in vm.bookingsCurrentPage | filter:{ $: roomTypeSelected || undefined}: true" ng-class="vm.getClassType(book.bookingType)" 
+	                     ng-click="vm.getBookingDetail(book)">
+                         	<td>{{book.bookingId}}</td>
+                         	<td>{{book.customer}}</td>
+                         	<td>{{book.dateFrom}}</td>
+                         	<td>{{book.dateTo}}</td>
+                         	<td>{{book.adultNumber}}/{{book.childrenNumber}}/{{book.babyNumber}}</td>
+                         	<td>
+                         		<p ng-repeat="room in book.rooms">{{room.roomNumber}}&nbsp;{{room.description}}</br>
+                         	</td>
+                         	<!-- Solo se pinta para reservas de tipo Liberate -->
+                         	<td ng-if="book.price > '0'">{{book.price}}</td>
+                         	<td ng-if="!book.price || book.price && book.price == '0'">&nbsp;</td>
+                         	<td ng-class="vm.getClassBookingType(book.bookingType)">{{vm.getBookingTypeLabel(book.bookingType)}}</td>
+                         	<td class="text-orange">NEW</td>
+	                        <td><span class="glyphicon glyphicon-comment"></span></td>
+	                    </tr>                    
+	                </tbody>
+            	</table>
+        	</div>
+        	<!-- Módulo de paginación -->
+			<div pagination total-items="vm.totalBookings" ng-model="vm.currentPage" items-per-page="vm.itemsPerPage" class="pagination-sm pull-right" boundary-links="true" rotate="false" max-size="vm.maxSize" ng-change="vm.changePage()"></div>
+        	<!-- Modulo de totalización -->
+        	<div class="bottom-table table-footer-sticky slidetoggle no-fixed">
+
+	                    <div class="col-xs-10">
+	                        <table class="table text-left">
+	                            <thead>
+	                                <th>{{translations.BOOKINGON}}</th>
+	                                <th>{{translations.SINGLE}}</th>
+	                                <th>{{translations.DOUBLE}}</th>
+	                                <th>{{translations.TRIPLE}}</th>
+	                                <th>{{translations.SUIT}}</th>
+	                                <th>{{translations.MEDITERRANEAN}}</th>
+	                                <th>{{translations.TOTAL}}</th>
+	                            </thead>
+	                            <tbody>
+	                                <tr>
+	                                    <td><b>{{vm.date}}</b></td>
+	                                    <td>
+	                                        <h3>{{vm.totals[vm.roomTypes["SGL"]]}}</h3>
+	                                        <small></small>
+	                                    </td>
+	                                    <td>
+	                                        <h3>{{vm.totals[vm.roomTypes["DBL"]]}}</h3>
+	                                        <small></small>
+	                                    </td>
+	                                    <td>
+	                                        <h3>{{vm.totals[vm.roomTypes["TPL"]]}}</h3>
+	                                        <small></small>
+	                                    </td>
+	                                    <td>
+	                                        <h3>{{vm.totals[vm.roomTypes["SUI"]]}}</h3>
+	                                        <small></small>
+	                                    </td>
+	                                    <td>
+	                                        <h3>{{vm.totals[vm.roomTypes["MED"]]}}</h3>
+	                                        <small></small>
+	                                    </td>
+	                                    <td>
+	                                        <h3>{{vm.totals["TOTAL"]}}</h3>
+	                                        <small></small>
+	                                    </td>
+	                                </tr>
+	                            </tbody>
+	                        </table>
+	       
+            	</div>
+            	<button type="button" class="btn btn-default btn-sm btntoggle">
+            		<span class="glyphicon glyphicon-chevron-down"></span>
+           		</button>
+        	</div>
+        	
+    	</section>

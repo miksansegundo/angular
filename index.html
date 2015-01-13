@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html id="ng-app" data-ng-app="SWSPortal">
+	<head>
+		<meta charset="utf-8"/>
+		<title data-ng-bind="translations.APP_NAME"></title>
+		<!-- Common CSS -->
+		<link rel="stylesheet" type="text/css" href="static/css/font-awesome.min.css"/>
+		<link rel="stylesheet" type="text/css" href="static/css/bootstrap.css"/>
+		<!-- App CSS -->
+		<link rel="stylesheet" type="text/css" href="static/css/supplier-hotelbeds.css"/>
+		<!-- Libs JS -->
+		<script type="text/javascript" src="static/libs/modernizr.js"></script>
+		<!--[if lt IE 9]>
+			<script type="text/javascript"> 
+			window.simpleUI = true;
+			// Avoid `console` errors in browsers that lack a console.
+			if (!window.console) { window.console = function (msg) {
+				alert(msg)
+			}}
+			</script>
+			<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.0.3/es5-sham.js"></script>
+			<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.0.3/es5-shim.js"></script>
+			<script type="text/javascript" src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<script type="text/javascript" src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+			<script type="text/javascript" src="static/libs/ie8.js"></script>
+		<![endif]-->
+	</head>
+	<body class="index ng-cloak" data-ng-controller="MainController as main">
+		<div id="wrapper">
+			
+			<header data-ng-include="layout.header" id="header" class="navbar-default" ></header>
+			
+			<nav data-ng-if="globals.user.menu" data-ng-include="layout.menu" id="sub-header" class="navbar-default" role="navigation"></nav>
+			
+			<div class="wrap"> 
+	
+				<div class="container" style="position:relative; min-height: 200px; ">
+					<div data-ng-if="globals.preloader" style="z-index: 10;position: absolute; height: 100%; width: 100%; margin-top: 4px; background: #fff url('static/images/preloader.gif') no-repeat 50% 50%;text-align: center"></div>
+					<div data-ng-view=""></div>
+				</div>
+			
+			</div> <!-- end wrap -->
+				
+			<footer data-ng-include="layout.footer" id="footer" ></footer>
+			
+		</div> <!-- end wrapper -->
+		
+		<!-- Static Vendor Libraries -->
+		<script type="text/javascript" src="static/libs/jquery-1.11.0.min.js"></script>
+		<script type="text/javascript" src="static/libs/angular-1.2.27/angular.js"></script>
+		<script type="text/javascript" src="static/libs/angular-1.2.27/angular-route.min.js"></script>
+		<script type="text/javascript" src="static/libs/angular-1.2.27/angular-sanitize.min.js"></script>
+		<script type="text/javascript" src="static/libs/ui-bootstrap-tpls-0.12.0.min.js"></script>
+		<script type="text/javascript" src="static/libs/select.min.js"></script>
+		<!-- Core Application Files -->
+		<script type="text/javascript" src="core/tui-app.js"></script>
+		<script type="text/javascript" src="core/tui-config-constant.js"></script>
+		<script type="text/javascript" src="common/services/tui-http-service.js"></script>
+		<script type="text/javascript" src="core/tui-config-auth-interceptor.js"></script>
+		<script type="text/javascript" src="core/tui-config-error-interceptor.js"></script>
+		<script type="text/javascript" src="core/tui-main-service.js"></script>
+		<script type="text/javascript" src="core/tui-config-run.js"></script>
+		<script type="text/javascript" src="common/services/tui-route-provider.js"></script>
+		<script type="text/javascript" src="core/tui-config-router.js"></script>
+		<script type="text/javascript" src="core/tui-config-run-after-views.js"></script>
+		<script type="text/javascript" src="core/tui-main-controller.js"></script>
+		<!-- Common Application Files -->
+		<script type="text/javascript" src="common/directives/tui-tabs.js"></script>
+		<!-- Views Application Files -->
+
+		<script type="text/javascript" src="views/login/login-service.js"></script>
+		<script type="text/javascript" src="views/login/login-controller.js"></script>
+
+		<script type="text/javascript" src="views/inbox-messages/inbox-messages-service.js"></script>
+		<script type="text/javascript" src="views/inbox-messages/inbox-messages-controller.js"></script>
+
+		<script type="text/javascript" src="views/dashboard/dashboard-service.js"></script>
+		<script type="text/javascript" src="views/dashboard/dashboard-controller.js"></script>
+
+		<script type="text/javascript" src="views/bookings/bookings-service.js"></script>
+		<script type="text/javascript" src="views/bookings/bookings-controller.js"></script>
+		<script type="text/javascript" src="views/bookings-filter/bookings-filter-service.js"></script>
+		<script type="text/javascript" src="views/bookings-filter/bookings-filter-controller.js"></script>
+		<script type="text/javascript" src="views/quickview/quickview-service.js"></script>
+		<script type="text/javascript" src="views/quickview/quickview-controller.js"></script>
+		<script type="text/javascript" src="views/select-hotel/select-hotel-service.js"></script>
+		<script type="text/javascript" src="views/select-hotel/select-hotel-controller.js"></script>				
+
+		<script type="text/javascript" src="views/contact/contact-service.js"></script>
+		<script type="text/javascript" src="views/contact/contact-controller.js"></script>
+
+		<script type="text/javascript" src="views/booking/booking-service.js"></script>
+		<script type="text/javascript" src="views/booking/booking-controller.js"></script>
+
+
+		
+	</body>
+</html>

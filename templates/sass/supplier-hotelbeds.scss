@@ -1,0 +1,81 @@
+$icons-s-layout: vertical;
+$icons-s-spacing: 20px; 
+$icons-s-position:50%;
+
+$icons-m-layout: vertical;
+$icons-m-spacing: 20px; 
+$icons-m-position:50%;
+
+$icons-l-layout: vertical;
+$icons-l-spacing: 20px; 
+$icons-l-position:50%;
+
+$icons-xl-layout: vertical;
+$icons-xl-spacing: 20px; 
+$icons-xl-position:50%;
+
+$icons-xxl-layout: vertical;
+$icons-xxl-spacing: 20px; 
+$icons-xxl-position:50%;  
+
+@import "compass/utilities/sprites"; 
+
+@import "icons-xxl/*.png";
+@include all-icons-xxl-sprites;  
+@import "icons-xl/*.png";
+@include all-icons-xl-sprites; 
+@import "icons-l/*.png";
+@include all-icons-l-sprites; 
+@import "icons-m/*.png";
+@include all-icons-m-sprites;
+@import "icons-s/*.png";
+@include all-icons-s-sprites; 
+ 
+
+
+@import "compass";
+@import "compass/css3";
+
+@import "config/varibales"; 
+@import "config/classes";
+@import "config/fonts";
+
+ 
+/* Sections of layout */
+ 
+@import "components/header";  
+@import "components/sub-header";
+
+@import "components/menu";
+@import "components/layout"; 
+
+@import "components/maps"; 
+@import "components/submenu";
+@import "components/helper"; 
+@import "components/typografi";
+@import "components/tables";
+@import "components/charts";
+@import "components/icons";
+@import "components/panels";  
+@import "components/flags"; 
+@import "components/colors";
+@import "components/tooltip"; 
+@import "components/alert";
+@import "components/other"; 
+@import "components/blocks";
+ 
+@import "components/forms/forms";
+@import "components/forms/buttons";
+@import "components/forms/selects";
+
+@import "responsive/ipad"; 
+@import "responsive/desktop";
+ 
+@import "plugins/animate";
+
+
+
+@import "components/states";
+
+/*    PLUGINS    */
+

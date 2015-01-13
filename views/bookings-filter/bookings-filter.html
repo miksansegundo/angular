@@ -1,0 +1,282 @@
+<div id="wrapper" ng-controller="BookingsFilterController as vm">
+	<div class="wrap"> 	       
+	    <section class="section">	        
+	        <div class="container">	
+	            <h2>Find a booking</h2>
+	            <div class="block-default col-md-7 padding-right">
+	                <div class="box">	
+	                    <form role="form" ng-submit="vm.getBookings(vm.filter)" novalidate>	
+	                        <div class="form-group">
+	                            <p>Keyword:</p>
+	                            <div class="input-group">
+	                              <div class="input-group-addon"><span class="glyphicon glyphicon-search"></span></div>
+	                              <input type="text" class="form-control" id="exampleInputEmail2" placeholder="Name, reference number, email..." ng-model="vm.filter.email" >
+	                            </div>
+	                        </div>	
+	                        <div class="row">	
+                         		<div class="col col-md-3 calendar-form">
+                           	 		<p>From:</p>
+	                            	<div class="">
+	                                	<p class="input-group">
+	                                  		<input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="vm.filter.dt" is-open="opened" min-date="minDate" max-date="'2015-06-22'" datepicker-options="dateOptions" date-disabled="disabled(date, mode)"  close-text="Close" />
+	                                  		<span class="input-group-btn">
+                                    			<button type="button" class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+	                                  		</span>
+                                		</p>
+	                            	</div>
+                        		</div> <!-- end row -->	
+	                        	<div class="col col-md-1 separator"> - </div> <!-- separador -->
+	                            	<div class="col col-md-3 calendar-form">
+	                                	<p>To:</p>
+                                		<div>
+	                                    	<p class="input-group">
+		                                      	<input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="dt" is-open="opened" min-date="minDate" max-date="'2015-06-22'" datepicker-options="dateOptions" date-disabled="disabled(date, mode)"  close-text="Close" />
+		                                     		<span class="input-group-btn">
+		                                        	<button type="button" class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+		                                      	</span>
+	                                    	</p>
+	                                	</div>
+	                            	</div>	
+	                        	</div> <!-- END ROW -->
+	                        	<div class="row"> <!-- ADVANCED SEARCH -->
+	                            	<div class="accordion">	
+	                                	<button class="btn btn-link text-orange border-bottom"><span class="glyphicon glyphicon-chevron-right"></span>Advanced search</button>
+	                                	<div class="row expanded">	
+	                     
+	                                        	<div class="col-md-6"> <!-- start col left -->	
+	                                            	<div class="row">
+	                                                	<p class="display-block">Check-out date:</p>
+	                                                	<div class="col col-md-5 calendar-form">
+	                                                    	<div class="">
+	                                                        	<p class="input-group">
+	                                                          		<input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="dt" is-open="opened" min-date="minDate" max-date="'2015-06-22'" datepicker-options="dateOptions" date-disabled="disabled(date, mode)"  close-text="Close" />
+	                                                          		<span class="input-group-btn">
+	                                                            		<button type="button" class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+	                                                          		</span>
+                                                        		</p>
+	                                                    	</div>	
+	                                                	</div> <!-- end row -->	
+	                                                	<div class="col col-md-1 separator-min"> - </div> <!-- separador -->
+	                                                	<div class="col col-md-5 calendar-form">
+	                                                    	<div>
+	                                                        	<p class="input-group">
+	                                                          		<input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="dt" is-open="opened" min-date="minDate" max-date="'2015-06-22'" datepicker-options="dateOptions" date-disabled="disabled(date, mode)"  close-text="Close" />
+	                                                          		<span class="input-group-btn">
+	                                                            		<button type="button" class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+	                                                          		</span>
+	                                                        	</p>
+	                                                    	</div>
+	                                                	</div>
+	                                            	</div> <!-- end row -->
+	                                            <div class="row">
+	
+	                                                <div class="form-group">
+	                                                    <span>All</span>
+	                                                    <div role="select" class="navbar-form navbar-left styled-select">
+	                                                        <select class="form-control">
+	                                                          <option>Mallorca Palace, San coma</option>
+	                                                          <option>My Hotel Name</option>
+	                                                          <option>My Hotel Name</option>
+	                                                          <option>My Hotel Name</option>
+	                                                          <option>My Hotel Name</option>
+	                                                        </select>
+	                                                    </div>
+	                                                </div>
+	
+	                                                <div class="form-group">
+	                                                    <span>Market</span>
+	                                                    <div role="select" class="navbar-form navbar-left styled-select">
+	                                                        <select class="form-control">
+	                                                          <option>All</option>
+	                                                          <option>My Hotel Name</option>
+	                                                          <option>My Hotel Name</option>
+	                                                          <option>My Hotel Name</option>
+	                                                          <option>My Hotel Name</option>
+	                                                        </select>
+	                                                    </div>
+	                                                </div>
+	
+	                                                <div class="form-group">
+	                                                    <span>Board</span>
+	                                                    <div role="select" class="navbar-form navbar-left styled-select">
+	                                                        <select class="form-control">
+	                                                          <option>Mallorca Palace, San coma</option>
+	                                                          <option>My Hotel Name</option>
+	                                                          <option>My Hotel Name</option>
+	                                                          <option>My Hotel Name</option>
+	                                                          <option>My Hotel Name</option>
+	                                                        </select>
+	                                                    </div>
+	                                                </div>
+	
+	                                                <div class="form-group">
+	                                                    <span>Hotel</span>
+	                                                    <div role="select" class="navbar-form navbar-left styled-select">
+	                                                        <select class="form-control">
+	                                                          <option>Mallorca Palace, San coma</option>
+	                                                          <option>My Hotel Name</option>
+	                                                          <option>My Hotel Name</option>
+	                                                          <option>My Hotel Name</option>
+	                                                          <option>My Hotel Name</option>
+	                                                        </select>
+	                                                    </div>
+	                                                </div>
+	
+	                                            </div> <!-- end row -->
+	
+	                                        </div> <!-- end col left -->
+	
+	                                         <div class="col-md-6"> <!-- start col right -->
+	
+	                                            <div class="row">
+	                                                <p class="display-block">Check-out date:</p>
+	                                                <div class="col col-md-5 calendar-form">
+	                                                    <div class="">
+	                                                        <p class="input-group">
+	                                                          <input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="dt" is-open="opened" min-date="minDate" max-date="'2015-06-22'" datepicker-options="dateOptions" date-disabled="disabled(date, mode)"  close-text="Close" />
+	                                                          <span class="input-group-btn">
+	                                                            <button type="button" class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+	                                                          </span>
+	                                                        </p>
+	                                                    </div>
+	                                                </div> <!-- end row -->
+	
+	                                                <div class="col col-md-1 separator-min"> - </div> <!-- separador -->
+	
+	                                                <div class="col col-md-5 calendar-form">
+	                                                    <div>
+	                                                        <p class="input-group">
+	                                                          <input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="dt" is-open="opened" min-date="minDate" max-date="'2015-06-22'" datepicker-options="dateOptions" date-disabled="disabled(date, mode)"  close-text="Close" />
+	                                                          <span class="input-group-btn">
+	                                                            <button type="button" class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+	                                                          </span>
+	                                                        </p>
+	                                                    </div>
+	                                                </div>
+	                                            </div> <!-- end row -->
+	
+	                                            <div class="row">
+	
+	                                                <div class="form-group">
+	                                                    <span>Rates</span>
+	                                                    <div role="select" class="navbar-form navbar-left styled-select">
+	                                                        <select class="form-control">
+	                                                          <option>All</option>
+	                                                          <option>My Hotel Name</option>
+	                                                          <option>My Hotel Name</option>
+	                                                          <option>My Hotel Name</option>
+	                                                          <option>My Hotel Name</option>
+	                                                        </select>
+	                                                    </div>
+	                                                </div>
+	
+	                                                <div class="form-group">
+	                                                    <span>Offers Applied</span>
+	                                                    <div role="select" class="navbar-form navbar-left styled-select">
+	                                                        <select class="form-control">
+	                                                          <option>All</option>
+	                                                          <option>My Hotel Name</option>
+	                                                          <option>My Hotel Name</option>
+	                                                          <option>My Hotel Name</option>
+	                                                          <option>My Hotel Name</option>
+	                                                        </select>
+	                                                    </div>
+	                                                </div>
+	
+	                                                <div class="form-group">
+	                                                    <span>Suplements</span>
+	                                                    <div role="select" class="navbar-form navbar-left styled-select">
+	                                                        <select class="form-control">
+	                                                          <option>All</option>
+	                                                          <option>My Hotel Name</option>
+	                                                          <option>My Hotel Name</option>
+	                                                          <option>My Hotel Name</option>
+	                                                          <option>My Hotel Name</option>
+	                                                        </select>
+	                                                    </div>
+	                                                </div>
+	
+	                                            </div> <!-- end row -->
+	
+	                                        </div> <!-- end col right -->
+	
+	               
+	
+	                                </div><!-- end row -->
+	
+	                            </div> <!-- end accordion -->
+	
+	                        </div> <!-- END ROW -->
+	
+	                        <div class="footer"> 
+	
+	                            <button class="btn btn-default pull-left">TODAY BOOKINGS</button>
+	                            <button type="submit" class="btn btn-default btn-turquesa pull-right">SEARCH</button>
+	
+	                        </div> <!-- END ROW -->
+	
+	                    </form> <!-- end form -->
+	
+	                </div> <!-- end box -->
+	
+	             </div> <!-- end block-default -->
+	
+	
+	            <div class="col-md-5 padding-left"> <!-- columna derecha -->
+	
+	                <div class="row">
+	                    <h4 class="border-bottom">LATEST CANCELATION AND MODIFICATIONS</h4>
+	                   <table class="table">
+	                        <tr>
+	                            <td>Nombre 1</td>
+	                            <td>rooms 2</td>
+	                            <td class="text-canceled">canceled</td>
+	                       </tr>
+	                       </tr>
+	                            <td>Nombre 3</td>
+	                            <td>rooms 2</td>
+	                            <td class="text-modified">modified</td>
+	                       </tr>
+	                        <tr>
+	                            <td>Nombre 3</td>
+	                            <td>rooms 2</td>
+	                            <td class="text-canceled">canceled</td>
+	                        </tr>
+	
+	                    </table>
+	                    <a class="text-orange">All cancelations or modifications</a>
+	                </div>
+	
+	                <div class="row">
+	                    <h4 class="border-bottom">BOOKING MADE TODAY (8)</h4>
+	                    <table class="table">
+	                        <tr>
+	                            <td>Nombre 1</td>
+	                            <td>rooms 2</td>
+	                            <td>2 nights</td>
+	                       </tr>
+	                       </tr>
+	                            <td>Nombre 3</td>
+	                            <td>rooms 2</td>
+	                            <td>2 nights</td>
+	                       </tr>
+	                        <tr>
+	                            <td>Nombre 3</td>
+	                            <td>rooms 2</td>
+	                            <td>2 nights</td>
+	                        </tr>
+	
+	                    </table>
+	                    <a class="text-orange">All cancelations or modifications</a>
+	                </div>
+	
+	            </div> <!-- end columna derecha -->
+	
+	        </div> <!-- end container -->
+	
+	    </section> <!-- end section -->
+
+			</div> <!-- end wrap -->
+	<!-- Incluye de forma dinámica el módulo a renderizar -->
+	<div ng-include=""/>
+</div> <!-- end wrapper -->

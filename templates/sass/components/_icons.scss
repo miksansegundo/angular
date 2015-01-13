@@ -1,0 +1,223 @@
+.fa-big {
+display: inline-block;
+font-family: FontAwesome;
+font-style: normal;
+font-weight: normal;
+line-height: 1;
+    &:before {
+    font-size: 5.0em;
+    }
+}
+
+.badge {
+@include border-radius(50%);
+display: inline-block;
+height: 20px;
+padding: 5px;
+position: absolute;
+left: 20px;
+text-align: center;
+top: 5px;
+width: 20px;
+font-size: 10px;
+    &.badge-alert {
+    background-color:$red;
+    }
+    &.badge-alert-bg {
+    background-color:$red;
+    font-size: 15px;
+    height: 40px;
+    padding: 12px;
+    width: 40px;
+    }
+    
+}
+
+
+
+
+
+.glyphicon-food:before {
+background: image-url('icon-food.png') scroll no-repeat 0 0;
+width:33px;
+height:33px; 
+display: block;
+content:"";
+position: relative;
+top:10px;
+margin-top: -20px;
+margin-right:10px;
+}
+.glyphicon-nose:before {
+background: image-url('icon-nose.png') scroll no-repeat 0 0;
+width:33px;
+height:33px; 
+display: block;
+content:""; 
+position: relative;
+top:10px;
+margin-top: -20px;
+margin-right:10px;
+}
+
+/* iconos S */
+
+.glyphicon-calendar-right {
+@include icons-s-sprite (arrow-right);
+text-indent: -9999px;
+height:20px;
+}
+
+.glyphicon-calendar-left {
+@include icons-s-sprite (arrow-left);
+text-indent: -9999px;
+height:20px;
+}
+
+/* iconos M*/
+
+.glyphicon-home {
+@include icons-m-sprite (home);
+text-indent: -9999px;
+min-height: 18px;
+}
+
+/*iconos L*/
+
+.glyphicon-search {
+@include icons-l-sprite (search);
+text-indent: -9999px;
+width: 30px;
+}
+
+.glyphicon-print {
+@include icons-l-sprite (print);
+text-indent: -9999px;
+width: 30px;
+}
+
+.glyphicon-comment {
+@include icons-l-sprite (comment);
+text-indent: -9999px; 
+width: 30px;
+top: 4px; 
+}
+
+.glyphicon-chevron-left {
+@include icons-l-sprite (back);
+text-indent: -9999px;
+width: 30px;
+top: 2px;
+}
+.glyphicon-chevron-right {
+@include icons-l-sprite (next);
+text-indent: -9999px; 
+width: 30px;
+top: 3px;
+}
+.glyphicon-chevron-right-orange {
+@include icons-l-sprite (next-orange);
+text-indent: -9999px;
+width: 30px;
+top: 3px;
+height:14px;
+}
+
+.glyphicon-chevron-down {
+@include icons-l-sprite (down);
+text-indent: -9999px;
+width: 30px;
+top: 10px;
+}
+.glyphicon-chevron-up {
+@include icons-l-sprite (up); 
+text-indent: -9999px;
+width: 30px;
+top: 10px;
+} 
+
+/*iconos xxl*/ 
+
+.glyphicon-user {
+@include icons-xxl-sprite (user);
+text-indent: -9999px;
+width: 33px;
+height:33px;
+}
+.glyphicon-transportation {
+@include icons-xxl-sprite (transportation); 
+text-indent: -9999px; 
+width: 33px;
+height:22px;
+top: 6px;
+margin-right: 2px;
+} 
+.glyphicon-cancelled {
+@include icons-xxl-sprite (cancelled);
+text-indent: -9999px;
+width: 33px;
+height:22px;
+top: 6px;
+margin-right: 2px;
+}
+.glyphicon-made {
+@include icons-xxl-sprite (made);
+text-indent: -9999px;
+width: 33px;
+height:22px;
+top: 6px;
+margin-right: 2px;
+}
+
+.icons{
+display: inline-block;
+height: 15px;
+margin-right: 5px;
+position: relative;
+top: 4px;
+width: 15px;
+background-position: center center;
+background-repeat: no-repeat;
+    &.icons-bg {
+    width:100%;
+    display: inline-block;
+    height:52px;
+    float: left;
+    padding-left: 65px;
+    background-position: left center;
+    padding-top: 7px;
+    }
+} 
+
+.icon-tools {
+background-image: image-url('icons/tools.png');
+}
+.icon-edit {
+background-image: image-url('icons/edit.png');
+height: 18px;
+}
+ 
+.icon-linked {
+background: image-url('icons/linked.png');
+margin: 0 0 0 10px;
+top: 1px;
+}
+
+.icon-reload {
+background: image-url('icons/reload.png') scroll no-repeat center center;
+padding:16px !important;
+}
+ 
+
+.icon-regular-discount {
+background-image: image-url('icons/regular-discount.png');
+}
+.icon-free-added {
+background-image: image-url('icons/free-added.png');
+}
+.icon-free-nights {
+background-image: image-url('icons/free-nights.png');
+}
+.icon-room-upgrade {
+background-image: image-url('icons/room-upgrade.png');
+}

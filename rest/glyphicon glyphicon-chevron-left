@@ -1,0 +1,30 @@
+{
+	"HEADER": {
+	    "TITLE": "HOTEL PARTNERS PORTAL",
+	    "LOGOUT": "Logout",
+    	"LOGIN": "Login",
+    	"CONTACT_US": "Contact Us",
+    	"NAV":{
+			"quickview": "QUICK PLANNER",
+			"bookings": "BOOKINGS",
+			"rates": "RATES & INVENTORY",
+			"finance": "FINANCE",
+			"content": "HOTEL INFO",
+			"report": "REPORTS"
+		}
+	},
+    "FOOTER": {
+    	"COPYRIGHT": "\u00A9 Copyright by Hotelbeds.com"
+    },
+    "SELHOTEL":{
+    	"TITLE": "Hotel Selection",
+    	"WELCOME": "Welcome {{name}} {{surname}}",
+		"SELECT": "Select the hotel you want to work with:",
+		"ADD": "Add a new hotel",
+		"OPEN": "Open",
+		"SELECTONE": "Select a hotel..."
+    },
+    "APP_NAME" :  "My Application",
+    "COPYRIGHT" : "\u00A9 Copyright by Hotelbeds.com",
+    "WELCOME": "Bienvenido {{name}} {{surname}}"
+}

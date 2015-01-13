@@ -1,0 +1,175 @@
+{
+    "name": "HOTEL VELADA MERIDA",
+    "token": "LUD3rrZEuo/FDX9+nOr04w==",
+    "authenticated": true,
+    "language": "CAS",
+    "userType": "EXT",
+    "hotel": null,
+    "menu": [
+        {
+            "id": "dashboard",
+            "path": "/dashboard",
+            "icon": "glyphicon glyphicon-home",
+            "submenu": null,
+            "tabs": null
+        },
+        {
+            "id": "quickview",
+            "path": "/quickview",
+            "icon": null,
+            "submenu": null,
+            "tabs": [
+                {
+                    "label": "DAY",
+                    "viewName": "bookings",
+                    "byDefault": true       
+                },
+                {
+                    "label": "WEEK",
+                    "viewName": "rates"
+                },
+                {
+                    "label": "MONTH",
+                    "viewName": "rates"
+                },
+                {
+                    "label": "SEASON",
+                    "viewName": "rates"
+                },
+                {
+                    "label": "YEAR",
+                    "viewName": "rates"
+                }
+            ]
+        },
+        {
+            "id": "content",
+            "path": "/content",
+            "icon": null,
+            "submenu": null,
+            "tabs": [
+                {
+                    "title": "generalInformation",
+                    "viewName": "/generalInformation"
+                },
+                {
+                    "title": "service",
+                    "viewName": "/service"
+                },
+                {
+                    "title": "rooms",
+                    "viewName": "/rooms"
+                },
+                {
+                    "title": "photos",
+                    "viewName": "/photos"
+                }
+            ]
+        },
+        {
+            "id": "bookings",
+            "path": "/bookings",
+            "icon": null,
+            "submenu": null,
+            "tabs": null
+        },
+        {
+            "id": "rates",
+            "path": "/rates",
+            "icon": null,
+            "submenu": [
+                {
+                    "title": "Rates&Availability",
+                    "items": [
+                        {
+                            "title": "overallView",
+                            "viewName": "/overallView"
+                        },
+                        {
+                            "title": "rateList",
+                            "viewName": "/rateList"
+                        },
+                        {
+                            "title": "editPrice",
+                            "viewName": "/editPrice"
+                        },
+                        {
+                            "title": "openCloseAvailability",
+                            "viewName": "/openCloseAvailability"
+                        }
+                    ]
+                },
+                {
+                    "title": "Offers",
+                    "items": [
+                        {
+                            "title": "offersList",
+                            "viewName": "/offersList"
+                        },
+                        {
+                            "title": "applyStopOffers",
+                            "viewName": "/applyStopOffers"
+                        },
+                        {
+                            "title": "createNewOffer",
+                            "viewName": "/createNewOffer"
+                        }
+                    ]
+                },
+                {
+                    "title": "Supplements",
+                    "items": [
+                        {
+                            "title": "supplementsList",
+                            "viewName": "/supplementsList"
+                        },
+                        {
+                            "title": "baseBoards",
+                            "viewName": "/baseBoards"
+                        },
+                        {
+                            "title": "requestNewSupplement",
+                            "viewName": "/requestNewSupplement"
+                        },
+                        {
+                            "title": "openCloseAvailability",
+                            "viewName": "/openCloseAvailability"
+                        }
+                    ]
+                }
+            ],
+            "tabs": null
+        },
+        {
+            "id": "finance",
+            "path": "/finance",
+            "icon": null,
+            "submenu": null,
+            "tabs": null
+        },
+        {
+            "id": "report",
+            "path": "/report",
+            "icon": null,
+            "submenu": null,
+            "tabs": null
+        }
+    ],
+    "hotelList": [
+        {
+            "hotelCode": "152135",
+            "name": "Velada Merida",
+            "location": null,
+            "countryCode": null,
+            "countryName": null,
+            "onlyLiberate": false,
+            "destinationCode": null,
+            "destinationName": null,
+            "chainCode": null,
+            "chainName": null,
+            "incomingCode": null,
+            "nameAndCode": "Velada Merida"
+        }
+    ],
+    "errorList": null
+}

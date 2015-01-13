@@ -1,0 +1,56 @@
+.csstransitions {
+		
+	/**
+	 * Fade In
+	 */
+	
+	$default-fade-x: 100px;
+	$default-fade-y: 80px;
+	
+	.fade-in--start,
+	.fade-in-left--start,
+	.fade-in-right--start,
+	.fade-in-up--start,
+	.fade-in-down--start {
+		opacity: 0;
+	}
+	
+	.fade-in-left--start {
+		@include transform(translateX(-1 * $default-fade-x));
+	}
+	
+	.fade-in-right--start {
+		@include transform(translateX($default-fade-x));
+	}
+	
+	.fade-in-up--start { 
+		@include transform(translateY($default-fade-y));
+	}
+	
+	.fade-in-down--start {
+		@include transform(translateY(-1 * $default-fade-y));
+	}
+	
+	/**
+	 * Slide In
+	 */
+	
+	$default-slide-x: 1000px;
+	$default-slide-y: 300px;
+	
+	.slide-in-left--start {
+		@include transform(translateX(-1 * $default-slide-x));
+	}
+	
+	.slide-in-right--start {
+		@include transform(translateX($default-slide-x));
+	}
+	
+	.slide-in-up--start {
+		@include transform(translateY($default-slide-y));
+	}
+	
+	.slide-in-down--start {
+		@include transform(translateY(-1 * $default-slide-y));
+	}
+}

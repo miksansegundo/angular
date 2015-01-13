@@ -1,0 +1,26 @@
+[
+    {
+        "bookingId": 4937905,
+        "incoming": 102,
+        "supplierCode": 8735,
+        
+        "customer": "ERNEST  BERKOVITCH",
+        "dateFrom": "2014-12-18",
+        "dateTo": "2014-12-22",
+        "adultNumber": 2,
+        "childrenNumber": 0,
+        "babyNumber": 0,
+        "status": "NV",
+        "bookingType": "N",
+        "rooms": [
+            {
+                "code": "DBL",
+                "roomNumber": 1,
+                "description": "DOBLE"
+            }
+        ],
+        "price": null,
+        "currency": null
+    }
+
+]
